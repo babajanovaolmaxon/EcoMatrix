@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMatrix System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="main-title">EcoMatrix: Smart Ekotizim</h1>
+
+    <div class="container">
+        <div class="card">
+            <h2>Havo Sifati va Sog'liq (AQI)</h2>
+            <p>Hududingizdagi PM2.5 zarrachalari miqdorini kiriting, havo sifatini va tavsiyalarni aniqlaymiz.</p>
+            
+            <input type="number" id="aqiZarracha" placeholder="PM2.5 miqdori (mkg/m³)">
+            
+            <button onclick="tekshirAQI()">Havoni Tekshirish</button>
+            <div id="aqiNatija" class="result"></div>
+        </div>
+
+        <div class="card">
+            <h2>Yashil Transport va Sayohat</h2>
+            <p>Bosib o'tadigan masofangiz va transport turiga qarab tabiatga qancha zarar yoki foyda keltirishingizni biling.</p>
+            
+            <input type="number" id="ecoMasofa" placeholder="Masofa (km da)">
+            <select id="transportTuri">
+                <option value="">Transport turi...</option>
+                <option value="velosiped">Velosiped / Piyoda 🚲</option>
+                <option value="elektromobil">Elektromobil ⚡️</option>
+                <option value="benzin">Benzinli Avtomobil 🚗</option>
+            </select>
+            
+            <button onclick="tahlilTransport()">Ekologik Izni Hisoblash</button>
+            <div id="ecoNatija" class="result"></div>
+        </div>
+
+        <div class="card">
+            <h2>Quyosh Paneli Samoradorligi</h2>
+            <p>Uyingiz tom qismi maydoni va quyoshli soatlarni kiriting, kunlik qancha energiya olishingizni hisoblaymiz.</p>
+            
+            <input type="number" id="paneliMaydon" placeholder="Tom maydoni (m²)">
+            <input type="number" id="quyoshSoat" placeholder="Kunlik quyoshli soat (masalan: 6)">
+            
+            <button onclick="hisoblaQuyosh()">Energiyani Hisoblash</button>
+            <div id="quyoshNatija" class="result"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
